@@ -278,6 +278,8 @@ tr:nth-child(even) td{background:var(--bg-alt)}
   font-weight:700;padding:7px 16px;border-radius:999px;font-size:.95rem;
 }
 
+.area-zip{font-weight:700;color:var(--navy);font-size:.9rem;letter-spacing:.02em;margin-bottom:.4em}
+
 .grid-4{grid-template-columns:repeat(4,1fr)}
 .phase-card{
   background:#fff;border:1px solid var(--line);border-top:5px solid var(--cyan);
