@@ -1,0 +1,3 @@
+# PREVIEW PHASE: crawling blocked until launch. Remove at launch.
+User-agent: *
+Disallow: /
