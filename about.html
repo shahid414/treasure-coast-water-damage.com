@@ -52,7 +52,18 @@
  <nav class="main-nav" aria-label="Main navigation">
  <ul>
  <li><a href="/">Home</a></li>
- <li><a href="/services">Services</a></li>
+ <li class="has-dropdown">
+ <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <ul class="dropdown-menu">
+ <li><a href="/emergency-water-extraction">Emergency Water Extraction</a></li>
+ <li><a href="/structural-drying">Structural Drying</a></li>
+ <li><a href="/flood-cleanup">Flood Cleanup</a></li>
+ <li><a href="/sewage-cleanup">Sewage Cleanup</a></li>
+ <li><a href="/mold-remediation">Mold Remediation</a></li>
+ <li><a href="/storm-damage-restoration">Storm Damage Restoration</a></li>
+ <li class="drop-all"><a href="/#services">All Services →</a></li>
+ </ul>
+</li>
  <li><a href="/cost">Cost</a></li>
  <li><a href="/about" class="active">About</a></li>
  <li><a href="/faq">FAQ</a></li>
@@ -118,7 +129,7 @@
  </ul>
 
  <h2>Our Services</h2>
- <p>Emergency water extraction, structural drying, flood cleanup, sewage cleanup, mold remediation and storm damage restoration — plus the repairs that follow. See the full list on our <a href="/services">services page</a>, or read answers to common questions on our <a href="/faq">FAQ page</a>.</p>
+ <p>Emergency water extraction, structural drying, flood cleanup, sewage cleanup, mold remediation and storm damage restoration — plus the repairs that follow. See the full list on our <a href="/#services">services page</a>, or read answers to common questions on our <a href="/faq">FAQ page</a>.</p>
  <p>If you have water in your home right now, the fastest way to reach us is by phone: <a href="tel:+17725550100"><strong>(772) 555-0100</strong></a>. You can also <a href="/contact">send a service request</a> and we will call you back.</p>
  </div>
 </section>
@@ -192,7 +203,7 @@
  <div>
  <h3>Company</h3>
  <ul>
- <li><a href="/services">All Services</a></li>
+ <li><a href="/#services">All Services</a></li>
  <li><a href="/cost">Restoration Cost Guide</a></li>
  <li><a href="/about">About Us</a></li>
  <li><a href="/faq">FAQ</a></li>

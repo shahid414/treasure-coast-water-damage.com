@@ -89,6 +89,34 @@ li{margin-bottom:.35em}
 .main-nav a{color:#fff;font-weight:700;padding:13px 20px;display:block;font-size:.98rem}
 .main-nav a:hover{background:rgba(255,255,255,.18);text-decoration:none;color:#fff}
 .main-nav a.active{background:var(--navy);color:#fff}
+
+/* ---------- Services dropdown (desktop hover + click/tap, mobile tap) ---------- */
+.main-nav .has-dropdown{position:relative}
+.nav-drop-btn{
+  display:flex;align-items:center;gap:7px;width:100%;
+  background:none;border:none;cursor:pointer;font:inherit;
+  color:#fff;font-weight:700;padding:13px 20px;font-size:.98rem;
+}
+.nav-drop-btn:hover{background:rgba(255,255,255,.18);color:#fff}
+.nav-drop-btn.active{background:var(--navy);color:#fff}
+.nav-drop-btn .chev{transition:transform .18s ease;flex:0 0 auto}
+.has-dropdown.open .nav-drop-btn .chev{transform:rotate(180deg)}
+.main-nav .dropdown-menu{
+  display:none;position:absolute;top:100%;left:0;z-index:130;
+  min-width:290px;margin:0;padding:6px 0;list-style:none;
+  background:#fff;border:1px solid var(--line);border-radius:0 0 12px 12px;
+  box-shadow:0 14px 34px rgba(10,74,110,.22);
+}
+.dropdown-menu a{color:var(--navy);padding:11px 18px;font-size:.95rem}
+.dropdown-menu a:hover{background:var(--orange);color:#fff}
+.dropdown-menu .drop-all a{border-top:1px solid var(--line);color:var(--orange);font-weight:800}
+.dropdown-menu .drop-all a:hover{background:var(--orange);color:#fff}
+@media (min-width:901px){
+  .has-dropdown:hover > .dropdown-menu,
+  .has-dropdown:focus-within > .dropdown-menu{display:block}
+  .has-dropdown:hover .nav-drop-btn .chev{transform:rotate(180deg)}
+}
+.has-dropdown.open > .dropdown-menu{display:block}
 .nav-toggle{
   display:none;background:none;border:2px solid rgba(255,255,255,.65);color:#fff;
   border-radius:8px;padding:7px 14px;font-size:1rem;font-weight:700;cursor:pointer;margin:8px 0;
@@ -401,6 +429,14 @@ tr:nth-child(even) td{background:var(--pale)}
   .main-nav.open{display:block}
   .main-nav ul{flex-direction:column;gap:0}
   .main-nav a{padding:13px 20px}
+  .nav-drop-btn{width:100%;text-align:left;justify-content:space-between}
+  .main-nav .dropdown-menu{
+    position:static;display:none;box-shadow:none;border:none;border-radius:0;
+    background:rgba(0,0,0,.16);padding:0;
+  }
+  .main-nav .dropdown-menu a{color:#fff;padding:11px 20px 11px 38px}
+  .main-nav .dropdown-menu a:hover{background:rgba(255,255,255,.18)}
+  .main-nav .dropdown-menu .drop-all a{border-top:1px solid rgba(255,255,255,.25);color:#fff}
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
   .vp-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
